@@ -28,6 +28,7 @@
     </ul>
       <ul class="navbar-nav">
         <% if user_signed_in? %>
+    <%else%>
           <li class="nav-item">
             <%= link_to 'A user is signed in!', '#', class: 'nav-link' %>
           </li>
