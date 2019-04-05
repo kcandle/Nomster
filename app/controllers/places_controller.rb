@@ -47,6 +47,7 @@ def index
       end
   end
 
+  def 
   @place.update_attributes(place_params)
   redirect_to root_path
   end
