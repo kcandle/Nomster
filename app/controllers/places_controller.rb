@@ -4,7 +4,7 @@ before_action :authenticate_user!, only: [:new, :create, :edit]
 before_action :authenticate_user!, only: [:new, :create]
   
 def index
-    @places=Place.all
+    @places = Place.all
   end
 
   def new
@@ -21,11 +21,12 @@ def index
   end
 
   def show
-      @place=Place.find(params[:id])
+      @place = Place.find(params[:id])
+      @comment = Comment.new
   end
 
   def edit
-    @place=Place.find(params[:id])
+    @place = Place.find(params[:id])
 
     if @place.user != current_user
       return render plain: 'Not Allowed', status: :forbidden
@@ -53,7 +54,7 @@ def index
   end
 
   def destroy
-    @place=Place.find(params[:id])
+    @place  = Place.find(params[:id])
 
     if @place.user != current_user
         return render plain: 'Not Allowed', status: :forbidden
