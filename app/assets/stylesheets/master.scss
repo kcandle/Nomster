@@ -25,12 +25,12 @@ body {
 }
 
 .navbar {
-  background: image_url('congruent_pentagon.png');
+  background: image_url('turquoise.jpg');
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #000305;
+  color: #b3b3b3;
   font-weight: 600;
   letter-spacing: -0.3px;
 }
@@ -75,8 +75,7 @@ blockquote p {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 60px;
   font-weight: 100;
-  text-shadow: rgba(0,0,0, 0.95) 2px 2px;
-  background-color: rgba(0,0,0,0,5);
+  background-color: #b3b3b3;
   width: 100%;
   position: absolute;
   left: 0;
