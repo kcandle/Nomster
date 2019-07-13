@@ -1,10 +1,12 @@
+  <% puts "WHAT UP YOURE IN CLASS==================================" %>
 <div class="booyah-box col-10 offset-1">
   <h1>Welcome to the show page</h1>
   <i><%= @place.address %></i>
   <p><%= @place.description %></p>
 
   <div id="map"></div>
-
+  <% puts "WHAT UP YOURE IN CLASS==================================" %>
+<% puts @place.latitude %>
   <% if @place.latitude.present? && @place.longitude.present? %>
 
     <script>
