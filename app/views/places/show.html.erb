@@ -1,14 +1,10 @@
-  <% puts "WHAT UP YOURE IN CLASS==================================" %>
 <div class="booyah-box col-10 offset-1">
   <h1>Welcome to the show page</h1>
   <i><%= @place.address %></i>
   <p><%= @place.description %></p>
 
-  <div id="map"></div>
-  <% puts "WHAT UP YOURE IN CLASS==================================" %>
-<% puts @place.latitude %>
-  <% if @place.latitude.present? && @place.longitude.present? %>
-
+<% if @place.latitude.present? && @place.longitude.present? %>
+    
     <script>
 
       function initMap() {
@@ -31,11 +27,10 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDSHPkaXOhE5fkqEIijQQm7u2RZehlmKI&callback=initMap">
     </script>
 
-    <div id="map"></div>
+  <div id="map"></div>
+<% end %>
 
-  <% end %>
-
-  <br />
+<br />
 
     <div class="float-right">
       <% if current_user && current_user == @place.user %>
