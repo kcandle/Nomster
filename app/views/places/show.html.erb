@@ -45,9 +45,23 @@
   <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
     <%= f.input :caption %>
     <%= f.input :picture %>
-    <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
     <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
   <% end %>
+
+    <div class="clear">
+    <div class="row">
+      <% @place.photos.each do |photo| %>
+        <div class="col-12 col-sm-6">
+          <blockquote>
+            <% if photo.humanized_rating.present? %>
+              <b><%= photo.humanized_rating %></b> -
+            <% end %>
+            <%= photo.caption %>
+            <small><%= photo.user.email %></small>
+          </blockquote>
+        </div>
+      <% end %>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -102,6 +116,7 @@
         </div>
       <% end %>
   </div>
+
 </div>
 
 
