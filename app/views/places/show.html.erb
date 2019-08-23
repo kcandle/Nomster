@@ -50,13 +50,10 @@
 
   <div class="clear">
     <div class="row">
-      <%= image_tag photo.picture.url, class: 'img-fluid' %>
       <% @place.photos.each do |photo| %>
         <div class="col-12 col-sm-6">
+          <%= image_tag photo.picture.url.to_s, class: 'img-fluid' %>
           <blockquote>
-            <% if photo.humanized_rating.present? %>
-              <b><%= photo.humanized_rating %></b> -
-            <% end %>
             <%= photo.caption %>
             <small><%= photo.user.email %></small>
           </blockquote>
