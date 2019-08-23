@@ -53,9 +53,6 @@
       <% @place.photos.each do |photo| %>
         <div class="col-12 col-sm-6">
           <blockquote>
-            <% if photo.humanized_rating.present? %>
-              <b><%= photo.humanized_rating %></b> -
-            <% end %>
             <%= photo.caption %>
             <small><%= photo.user.email %></small>
           </blockquote>
