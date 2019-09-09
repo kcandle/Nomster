@@ -1,6 +1,7 @@
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
+
   <br/><br/>
   <p><%= @place.description %></p>
 
@@ -23,16 +24,13 @@
           });
         }
       </script>
-      
+
       <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABiDZXH5ygsYDFCsHxkYATvOSJIq0Pd7c&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiB1l8q58CiFbF8_CjMXMa76PME-vS3Fs&callback=initMap">
       </script>
       
       <div id="map"></div>
     <% end %>
-
-  <br />
-
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
